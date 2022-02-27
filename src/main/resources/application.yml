@@ -1,0 +1,49 @@
+jwt:
+  secret: '[a-zA-Z0-9._]^+$Guidelines89797987forAlphabeticalArraNumeralsandOtherSymbo$'  # Nota: Essa eh uma string de seguranca(Eh como se fosse um password), podia ser uma outra qualquer(eh random string). E sera configurada no pacote utility, na class JWTTokenProvider
+          # Nota: Essa senha secreta pode ser verificada a partir da pagina jwt.io depois de colocar token, desliza para a parte inferior da pagina e colar a senha secreta e se for verdadeira, vai retornar Signature Verified
+server:
+  port: 8080
+  
+#Configurando o padrao "Whitelabel Error Page" do spring que aparece quando nao digitamos ou tem uma URL nao mapeada.
+#Nota, nao usamos essa configuracao, mas sim estendemos ErrorController e implementamos o metodo notFound404 e getErrorPath() na classe ExceptionHandling. Para configurar dessa maneira, teriamos de de ir a classe ExceptionHandling e tirar a implementacao ErrorController e descomentar o metodo noHandlerFoundException e por fim neste arquivo descomentar mvc.throw-exception-if-no-handler-found: true
+#  error:
+#    whitelabel:
+#      enabled: false
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/booksApiV2?createDatabaseIfNotExist=true&useSSL=false
+    username: root
+    #password:   
+  jpa:
+    show-sql: true 
+    hibernate:
+      ddl-auto: update  #create #update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  servlet:
+    multipart:
+      max-file-size: 10MB  # Limite maximo de um file a carregar
+      max-request-size: 10MB  # Limite maximo de todos files a carregar
+  
+  # A configuracao serve para configuararmos pessoalmente a pagina "Whitelabel Error Page", que vem com erro 404, caso nao exita URL mapeada daquela maneira     
+#  mvc:
+#    throw-exception-if-no-handler-found: true  # E vai retornar noHandlerFoundException
+#  web:
+#    resources:
+#      add-mappings: false
+
+
+# Nota: Usou-se este formato para evitar a repeticao de codigo
+# Nota: Para tal usaremos escada, oque vem de baixo esta dentro do que esta em cima. Com o properties seria:
+
+# spring.datasource.url=jdbc:mysql://localhost:3306/supportportal
+#spring.datasource.username=root
+#spring.datasource.password=root
+#spring.jpa.show-sql=true
+#spring.jpa.hibernate.ddl-auto=update
+
+# ddl-auto: update serve para actualizar as tabelas, se nao existirem coloca create e seram criadas
+
