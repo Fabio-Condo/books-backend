@@ -18,7 +18,7 @@ API conta conta com 5 niveis de Roles, e cada role contém as suas permissões
 - ADMIN_AUTHORITIES (Usuário cadastrado dentro do sistema com permissões de salvar, pesquisar e actualizar os users, livros e autores)
 - SUPER_ADMIN_AUTHORITIES (Usuário cadastrado dentro do sistema com permissões de salvar, pesquisar, actualizar e eliminar os users, livros e autores)
 
-#Outras funcionalidades ou serviços desponibilizados pela API:
+# Outras funcionalidades ou serviços desponibilizados pela API:
 - No cadastro dos usuários, a API automaticamente gera um password e envia para o email do usuário
 - O email e o username deve ser único na base de dados
 - Se tentar logar mais de 5 vezes com um username existente mas com senha errada, a API bloquea a conta
