@@ -13,7 +13,7 @@ Base de dados do projecto
 
 API conta conta com 5 niveis de Roles, e cada role contém as suas permissões
 - USER_AUTHORITIES (Usuário que se auto-cadastrou com permissões de pesquisar, comentar, e dar um like nos livros)
-- HR_AUTHORITIES
-- MANAGER_AUTHORITIES
-- ADMIN_AUTHORITIES
-- SUPER_ADMIN_AUTHORITIES
+- HR_AUTHORITIES (Usuário cadastrado dentro do sistema com permissões de pesquisar e actualizar os users, livros e autores)
+- MANAGER_AUTHORITIES (Usuário cadastrado dentro do sistema com permissões de pesquisar e actualizar os users, livros e autores)
+- ADMIN_AUTHORITIES (Usuário cadastrado dentro do sistema com permissões de salvar, pesquisar e actualizar os users, livros e autores)
+- SUPER_ADMIN_AUTHORITIES (Usuário cadastrado dentro do sistema com permissões de salvar, pesquisar, actualizar e eliminar os users, livros e autores)
