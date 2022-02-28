@@ -23,3 +23,5 @@ API conta conta com 5 niveis de Roles, e cada role contém as suas permissões
 - O email e o username deve ser único na base de dados
 - Se tentar logar mais de 5 vezes com um username existente mas com senha errada, a API bloquea a conta
 - A API tem uma funcionalidade (endpoint) que permite desbloquear a conta por username e enviar o novo password ou senha para o usuário 
+- Ao salvar o livro, é possivel incluir também a imagem e o pdf do livro
+- Ao salvar o usuário, é possivel incluir também a sua foto de perfil
