@@ -12,4 +12,8 @@ Base de dados do projecto
 - O usuário só pode actualizar seu próprio like, ou eliminar apenas o seu próprio like, ou seja, like dado por ele
 
 API conta conta com 5 niveis de Roles, e cada role contém as suas permissões
-- USER_AUTHORITIES (Usuário que se auto-cadastrou): "book:read", "comment:create", "comment:read","comment:update","comment:delete"   , "comment:create", "like:read","like:update","like:delete" 
+- USER_AUTHORITIES (Usuário que se auto-cadastrou com permissões de pesquisar, comentar, e dar um like nos livros)
+- HR_AUTHORITIES
+- MANAGER_AUTHORITIES
+- ADMIN_AUTHORITIES
+- SUPER_ADMIN_AUTHORITIES
