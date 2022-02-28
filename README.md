@@ -34,3 +34,5 @@ API conta conta com 5 niveis de Roles, e cada role contém as suas permissões
 - Spring Security
 - JWT
 - Mysql
+- Mail
+- hibernate
