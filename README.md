@@ -1,4 +1,4 @@
-# books-backend![books-bd]
+# books-backend
 
 Base de dados do projecto
 
