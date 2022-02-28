@@ -26,3 +26,11 @@ API conta conta com 5 niveis de Roles, e cada role contém as suas permissões
 - Ao salvar o livro, é possivel incluir também a imagem e o pdf do livro
 - Ao salvar o usuário, é possivel incluir também a sua foto de perfil
 - Ao eliminar o livro ou usuário, automaticamente são eliminados todos objectos relacionados (imagens e pdf's)
+
+# Ferramentas
+- Spring Boot
+- Spring Data JPA
+- Spring Validation
+- Spring Security
+- JWT
+- Mysql
