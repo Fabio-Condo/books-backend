@@ -207,26 +207,26 @@ public class BookService {
 	public Like saveLike(Long bookId, Like like) throws BookNotFoundException, LikeInvalidOptionException {
 		Book book = getExistBook(bookId);
 		Like likeByUserSaved = likeRepository.findLikeByUserAndBook(getAuthenticatedUser(), book);
-		String DeslikeType = "DESLIKED";
-		if((likeByUserSaved == null) && (like.getLikeType().toString() == DeslikeType)) {
+		String deslikeType = "DESLIKED";
+		if((likeByUserSaved == null) && (like.getLikeType().toString() == deslikeType)) {
 			LOGGER.error(INVALID_OPTION);
 			throw new LikeInvalidOptionException(INVALID_OPTION);
 		}
-		if((likeByUserSaved == null) && (like.getLikeType().toString() != DeslikeType)) {
+		if((likeByUserSaved == null) && (like.getLikeType().toString() != deslikeType)) {
 			like.setBook(book);
 			like.setUser(getAuthenticatedUser());
 			like.setLikeDate(new Date());
 			likeRepository.save(like);
 			return like;
 		}
-		if((likeByUserSaved != null) && (like.getLikeType().toString() != DeslikeType)) {
+		if((likeByUserSaved != null) && (like.getLikeType().toString() != deslikeType)) {
 			likeByUserSaved.setId(likeByUserSaved.getId());
 			likeByUserSaved.setLikeType(like.getLikeType());
 			likeByUserSaved.setLikeDate(new Date());
 			likeRepository.save(likeByUserSaved);
 			return likeByUserSaved;
 		}		
-		if((likeByUserSaved != null) && (like.getLikeType().toString() == DeslikeType)) {
+		if((likeByUserSaved != null) && (like.getLikeType().toString() == deslikeType)) {
 			likeRepository.deleteById(likeByUserSaved.getId());
 			return null;
 		}		
